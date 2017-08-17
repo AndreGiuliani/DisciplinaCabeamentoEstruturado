@@ -1,0 +1,13 @@
+Trafego ate o limite tecnico especificado no IEEE 802.3bz (Full Line Rate)
+Trafego com tamanho fixo e variado
+Gerare medir: Quadros menores ou maiores que o especificado pelo IEEE 802.3
+Gerare medir: Erros de CRC
+Medir: Quadros e Bytes Transmitidos e Recebidos
+Medir: Quadros Fragmentados
+Medir: Quadros fora de seqÅuencia
+Medir: Colis‰es
+Medir: Throughput (RFC2544)
+Medir: Delay (RFC 2544)
+Medir: Perda de Pacotes (RFC2544)
+Medir: Back-to-back frames (RFC 2544)
+Gerar e medir: BERT

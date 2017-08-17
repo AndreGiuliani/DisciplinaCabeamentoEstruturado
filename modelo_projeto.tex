@@ -11,7 +11,7 @@
 							onecolumn]{scrartcl}	 					% KOMA-article class
 
 \usepackage{lipsum}													% Package to create dummy text
-\usepackage[brazil]{babel}										% English language/hyphenation
+\usepackage[english]{babel}										% English language/hyphenation
 \usepackage[protrusion=true,expansion=true]{microtype}				% Better typography
 \usepackage{amsmath,amsfonts,amsthm}					% Math packages
 \usepackage[pdftex]{graphicx}									% Enable pdflatex
@@ -60,7 +60,7 @@
 %% ====================================
 %% ====================================
 
-\lfoot{\footnotesize \texttt{Cabeamento estruturado} \textbullet ~Modelo de projeto}
+\lfoot{\footnotesize \texttt{Etech Prestadora de Serviços - (43)999980797} \textbullet ~ Londrina / Pr.}
 
 
 \cfoot{}
@@ -86,8 +86,8 @@
 									  	\rule{\linewidth}{1pt}%
 										}
 
-\pretitle{\vspace{-30pt} \begin{flushleft} \HorRule 
-				\fontsize{50}{50} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont 
+\pretitle{\vspace{-12pt} \begin{flushleft} \HorRule 
+				\fontsize{24}{24} \usefont{OT1}{phv}{b}{n} \color{DarkRed} \selectfont 
 				}
 
 %% ====================================
@@ -96,7 +96,7 @@
 %% ====================================
 %% ====================================
 
-\title{Projeto de cabeamento 2017}					% Title of your article goes here
+\title{Projeto de cabeamento estruturado da empresa Etech ISP}					% Title of your article goes here
 
 %% ====================================
 
@@ -106,11 +106,12 @@
 
 \preauthor{\begin{flushleft}
 					\large \lineskip 0.5em \usefont{OT1}{phv}{b}{sl} \color{DarkRed}}
-\author{Alexandre L'Erario, Fulano de Tal }  	% Author name goes here
+\author{André Giuliani RA 1909797 }  	% Author name goes here
 
 
 \postauthor{\footnotesize \usefont{OT1}{phv}{m}{sl} \color{Black} 
-					\\Universidade Tecnológica Federal do Paraná - Câmpus Cornélio Procópio 								% Institution of author
+					\\Universidade Tecnológica Federal do Paraná - Campus Cornélio Procópio
+					\\Pós Graduação - Disciplina de Redes Estruturadas 								% Institution of author
 					\par\end{flushleft}\HorRule}
 
 \date{}																				% No date
@@ -133,14 +134,16 @@
 %% mude o resumo  do projeto
 %% ====================================
 %% ====================================
-\initial{E}\textbf{ste modelo exemplifica como um projeto de cabeamento estruturado deve ser elaborado. No projeto real,
-	esta seção deve indicar qual seria o propósito do projeto: reestruturar, criar uma estrura sem uma anterior, apresentar uma estrutura ficticia ou real  etc. Deve também conter sua cobertura (quais elementos este projeto aborda): Levantamento da planta física, Elaboração da planta lógica, Equipamentos passivos da rede (memorial descritivo), Levantamento de quantidade/custo, Plano de Certificação e orçamento.
-	No caso de projetos reais, deve conter também o escopo. No projeto real deve conter quais as atividades serão executadas e quais os responsáveis. Deve apresentar também as restrições que serão cumpridas e um possível acordo de nível de serviço (SLA).}
+\initial{E}\textbf
+{	ste projeto visa atender a empresa de telecomunicações Etech ME no que se refere à estrutura interna para a rede lógica, esta rede compreenderá serviços de dados (Computadores e Servidores), voz (Telefones IP) e monitoramento de imagem (Cftv/IP). Trata-se de uma instalação nova sendo que no local ainda não há nenhuma infraestrutura pronta. Todos os pontos descritos serão atendidos cabos de rede Cat 6 que possuem capacidade de transmissão de até 10GBps, após a instalação todos os pontos serão aferidos pelo processo de certificação.}\\
+
+\textbf
+{	Conforme levantamento no local, junto aos sócios, a empresa está iniciando seus trabalhos como um pequeno provedor de internet via fibra no bairro Vila Casone em Londrina Pr., porém, apesar da estrutura inicial ser considerada pequena o projeto deverá contemplar futuras ampliações evitando custos desnecessários a posteriori; as futuras ampliações se limitarão ao patamar de duas vezes o tamanho da rede inicialmente implantada e deverão ser aplicadas a todos os passivos de rede pertinentes, tais como: Eletrocalhas, dutos, racks, quadros etc.}
 
 %% ====================================
 \begin{figure}
 	\centering
-	\includegraphics{utfpr}
+	\includegraphics{Etech}
 \end{figure}
 
 \vspace{3cm}
@@ -167,27 +170,40 @@
 %% ====================================
 %% ====================================
 \section{Introdução}
-Explique nesta primeira seção qual seria o perfil do caso. Perfil do cliente, quantidade de colaboradores, quantidade de equipamentos de TI atualmente.
 
-Indique também nesta seção o escopo do projeto.
+%Explique nesta primeira seção qual seria o perfil do caso. Perfil do cliente, quantidade de colaboradores, quantidade de equipamentos de TI atualmente
+Este projeto de cabeamento estruturado destina-se à empresa Etech ISP, trata-se de um provedor de pequena escala de serviços de comunicação multimídia e acesso á internet. Inicialmente a empresa conta com 5 colaboradores sendo 2 da área técnica, 2 administrativos e 1 comercial, cada colaborador utilizará em seu posto de trabalho um desktop e um telefone IP. Atualmente os recursos ativos de TI constam de:
+Desktop Dell: 5 unidades;
+Telefones IP Intelbrás: 6 unidades;
+Servidor Dell: 1 unidade (No servidor estão virtualizados os serviços de Banco de dados, Aplicativo gerencial e Pabx IP); 
+%Indique também nesta seção o escopo do projeto.
+O propósito deste projeto é montar uma rede interna de alta capacidade e confiabilidade, com possibilidade de expansões futuras na proporção de 2 vezes o tamanho original.
+%Apresente um overview do parque tecnológico do caso.
 
-Apresente um overview do parque tecnológico do caso.
+
 \subsection{Benefícios}
-Explique quais seriam os benefícios provenientes após a execução deste projeto.
-
-
-\section{Estado atual}
-Aprente o estado atual da rede. Caso não tenha rede, desconsiderar esta seção.
-
-Caso tenha rede, deixe claro:
+%Explique quais seriam os benefícios provenientes da execução deste projeto.
+O sistema de cabeamento estruturado visa padronizar as instalações referentes a conectividade, trata-se de uma solução estratégica pois miniminiza custos de uma readequação física para mudanças de local no trabalho ou mesmo de novas instalações, segue os principais benefícios que a rede estruturada irá proporcionar:
 \begin{itemize}
-	\item os passivos de rede atuais:path panels, cabos, etc..;
-	\item as principais reclamações dos usuários. Qual o principal motivo da reestruturação? Efetue uma pesquisa junto aos colaboradores para determinar quais problemas a rede apresenta.
-	\item Observações. Analise a rede e verifique se há estruturas que não se enquadram nas normas ou que indicam suspeita de problemas.
+\item Suporte a diversos padrões de comunicação que utilizarão o mesmo meio físico, neste caso os sistemas de informática, telefonia e segurança irão utilizar o mesmo meio físico bem como o mesmo meio lógico utilizando o protocolo IP.
+\item Facilidade na mudança de layout interno visto que as interfaces são padronizadas e os equipamentos portam suas respectivas configurações \item independente que qual local estejam conectados na rede.
+\item Manutenção simples e rápida uma vez que todos os cabos e dispositivos são organizados e identificados em ambas extremidades.
+\item Localização fácil de um cabo devido ao mesmo ser identificado por todo seu trajeto.
+\item Documentação técnica que facilita a manutenção e novas implantações.
 \end{itemize}
+ 
+\section{Estado atual}
 
-\section{Requisitos}
-Crie uma enumeração dos requisitos do projeto.
+%Aprente o estado atual da rede. Caso não tenha rede, desconsiderar esta seção.
+Atualmente a empresa é uma prestadora de serviços na área telemática e encontra-se em uma edícula que está atrás do novo prédio construído para abrigar a nova sede e os novos serviços, logo não será reaproveitado nenhum material, exceto os computadores e telefones IP utilizados atualmente.
+
+
+%Caso tenha rede, deixe claro:
+%os passivos de rede atuais:path panels, cabos, etc..;
+%as principais reclamações dos usuários. Qual o principal motivo da reestruturação? Efetue uma pesquisa junto aos colaboradores para determinar quais problemas a rede apresenta.
+%Observações. Analise a rede e verifique se há estruturas que não se enquadram nas normas ou que indicam suspeita de problemas.
+
+
 
 \section{Usuários e Aplicativos}
 Explique nesta seção os usuários atuais e o perfil de crescimento, se por exemplo, há estimativa na evolução da empresa no que tange a quantidade de usuários, pontos de redes, equipamentos.
@@ -230,7 +246,6 @@ Eletrodutos, calhas, e qualquer material em que os cabos serão alojados/alocado
 Relacione todos os equipamentos passivos que serão utilizados, tipo, fabricante, quantidade.
 
 \subsection{Identificação dos cabos}
-Explique como os cabos serão identificados em seu projeto. Coloque uma relação dos cabos instalados e identificados.
 
 \section{Implantação}
 Estabeleça um cronograma de implantação:
@@ -260,14 +275,9 @@ Revisões periódicas na rede, emissão de certificados para novos pontos.
 \subsection{Plano de expansão}
 Existe um plano de expansão? Quantos novos pontos poderão ser acrecidos na rede, antes de migração de equipamentos na camada 2? Se houver expansão, quais equipamentos deverão ser direcionados para as estremidades da rede? 
 
-\section{Risco}
-Apresentar os riscos do projeto
 
 \section{Orçamento}
 Crie uma relação de orçamentos baseado na seções anteriores.
-
-\section{Recomendações}
-Observações e recomendações para o cliente.
 
 \section{Referências bibliográficas}
 Utilize o mendley, o jabref ou diretamente o bibtex para gerenciar suas referências biliográficas. As referências são criadas automaticamente de acordo com o uso no texto.
@@ -284,7 +294,7 @@ Analisando os pressupostos de \cite{ref3} e \cite{ref4} concluimos que....
 %% ***********************************************************************
 %% === remover daqui =====================================================
 %% ***********************************************************************
-=================================================
+
 \section{Elementos textuais - Alguns exemplos}
 
 Esta seção apresenta exemplos de elementos textuais. \textbf{Remova-a da versão final do texto}.
@@ -300,7 +310,7 @@ Texto antes da lista
 	\item Third item in a list
 \end{itemize}
 
-\subsubsection{Uma subseção de terceiro nivel}
+\subsubsection{Uma sub seçao de terceiro nivel}
 
 Exemplo de uma subseção
 
@@ -351,5 +361,4 @@ Você pode rotacionar figuras também. Para isso utilize o parâmetro angle=-90.
 %% ***********************************************************************
 %% === ate aqui    =====  ================================================
 %% ***********************************************************************
-
 \end{document}
